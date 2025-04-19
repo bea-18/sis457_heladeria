@@ -8,7 +8,7 @@ Este proyecto tiene como objetivo digitalizar los procesos internos del negocio,
 
 La heladería **ICE** es un emprendimiento local dedicado a la venta de helados artesanales. Ofrecemos una variedad de sabores frutales y promociones para nuestros clientes.
 
-## 🧩 Entidades del Sistema y Campos Tentativos
+## 🧩 Entidades del Sistema
 
 ### 🧁 producto ###
 - `id_producto (PK)`

@@ -12,7 +12,6 @@ La heladería **ICE** es un emprendimiento local dedicado a la venta de helados 
 
 ### 🧁 producto ###
 - `id_producto (PK)`
-- `id_sabor (FK)`
 - `nombre`
 - `precio`
 
@@ -25,22 +24,34 @@ La heladería **ICE** es un emprendimiento local dedicado a la venta de helados 
 - `teléfono`
 - `direcciòn`
 
+### usuario ###
+- `id_usuario(PK)`
+- `id_empleado(FK)`
+- `usuario`
+- `clave`
+
 ### 🚚 proveedor ###
 - `id_proveedor (PK)`
-- `nombre`
+- `nit`
 - `teléfono`
 - `tipo_producto`
 
 ### 🍓 sabor ###
 - `id_sabor (PK)`
+- `id_producto (FK)`
 - `nombre`
+
+### 👤 cliente ###
+- `id_cliente (PK)`
+- `ci`
+- `drazon_social`
+- `teléfono`
 
 ### 💰 venta ###
 - `id_venta (PK)`
-- `id_empleado (FK)`
+- `id_usuario (FK)`
 - `id_cliente(FK)`
 - `fecha`
-- `total`
 
 ### 📦 venta_detalle ###
 - `id_detalle (PK)`
@@ -49,20 +60,6 @@ La heladería **ICE** es un emprendimiento local dedicado a la venta de helados 
 - `cantidad`
 - `precio_unitario`
 - `total`
-
-### 🎁 promocion ###
-- `id_promocion (PK)`
-- `id_producto (FK)`
-- `nombre`
-- `descuento`
-- `fecha_inicio`
-- `fecha_fin`
-
-### 👤 cliente ###
-- `id_cliente (PK)`
-- `nombre`
-- `teléfono`
-- `direcciòn`
 
 ### 🛒 pedido ###
 - `id_pedido (PK)`

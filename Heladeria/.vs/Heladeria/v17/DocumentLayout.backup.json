@@ -1,10 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\SIS457\\sis457_heladeria\\Heladeria\\",
+  "WorkspaceRootPath": "E:\\SIS457\\sis457_heladeria\\sis457_heladeria\\Heladeria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2C86F838-4F87-4A0D-9E49-58479E5F54EF}|CadHeladeria\\CadHeladeria.csproj|d:\\sis457\\sis457_heladeria\\heladeria\\cadheladeria\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2C86F838-4F87-4A0D-9E49-58479E5F54EF}|CadHeladeria\\CadHeladeria.csproj|solutionrelative:cadheladeria\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DA191D44-460F-4663-A7B8-25BAC3E40A01}|CpHeladeria\\CpHeladeria.csproj|e:\\sis457\\sis457_heladeria\\sis457_heladeria\\heladeria\\cpheladeria\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA191D44-460F-4663-A7B8-25BAC3E40A01}|CpHeladeria\\CpHeladeria.csproj|solutionrelative:cpheladeria\\frmventa.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA191D44-460F-4663-A7B8-25BAC3E40A01}|CpHeladeria\\CpHeladeria.csproj|E:\\SIS457\\sis457_heladeria\\sis457_heladeria\\Heladeria\\cpheladeria\\frmproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA191D44-460F-4663-A7B8-25BAC3E40A01}|CpHeladeria\\CpHeladeria.csproj|solutionrelative:cpheladeria\\frmproveedor.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA191D44-460F-4663-A7B8-25BAC3E40A01}|CpHeladeria\\CpHeladeria.csproj|E:\\SIS457\\sis457_heladeria\\sis457_heladeria\\Heladeria\\cpheladeria\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA191D44-460F-4663-A7B8-25BAC3E40A01}|CpHeladeria\\CpHeladeria.csproj|solutionrelative:cpheladeria\\frmcliente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DA191D44-460F-4663-A7B8-25BAC3E40A01}|CpHeladeria\\CpHeladeria.csproj|E:\\SIS457\\sis457_heladeria\\sis457_heladeria\\Heladeria\\cpheladeria\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{DA191D44-460F-4663-A7B8-25BAC3E40A01}|CpHeladeria\\CpHeladeria.csproj|solutionrelative:cpheladeria\\frmproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,15 +31,47 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "D:\\SIS457\\sis457_heladeria\\Heladeria\\CadHeladeria\\Class1.cs",
-              "RelativeDocumentMoniker": "CadHeladeria\\Class1.cs",
-              "ToolTip": "D:\\SIS457\\sis457_heladeria\\Heladeria\\CadHeladeria\\Class1.cs",
-              "RelativeToolTip": "CadHeladeria\\Class1.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "FrmVenta.cs [Dise\u00F1o]",
+              "DocumentMoniker": "E:\\SIS457\\sis457_heladeria\\sis457_heladeria\\Heladeria\\CpHeladeria\\FrmVenta.cs",
+              "RelativeDocumentMoniker": "CpHeladeria\\FrmVenta.cs",
+              "ToolTip": "E:\\SIS457\\sis457_heladeria\\sis457_heladeria\\Heladeria\\CpHeladeria\\FrmVenta.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpHeladeria\\FrmVenta.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T04:10:21.128Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-10T15:03:59.094Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "FrmProveedor.cs [Dise\u00F1o]",
+              "DocumentMoniker": "E:\\SIS457\\sis457_heladeria\\sis457_heladeria\\Heladeria\\CpHeladeria\\FrmProveedor.cs",
+              "RelativeDocumentMoniker": "CpHeladeria\\FrmProveedor.cs",
+              "ToolTip": "E:\\SIS457\\sis457_heladeria\\sis457_heladeria\\Heladeria\\CpHeladeria\\FrmProveedor.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpHeladeria\\FrmProveedor.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T15:03:48.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmCliente.cs [Dise\u00F1o]",
+              "DocumentMoniker": "E:\\SIS457\\sis457_heladeria\\sis457_heladeria\\Heladeria\\CpHeladeria\\FrmCliente.cs",
+              "RelativeDocumentMoniker": "CpHeladeria\\FrmCliente.cs",
+              "ToolTip": "E:\\SIS457\\sis457_heladeria\\sis457_heladeria\\Heladeria\\CpHeladeria\\FrmCliente.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpHeladeria\\FrmCliente.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T15:03:37.517Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FrmProducto.cs [Dise\u00F1o]",
+              "DocumentMoniker": "E:\\SIS457\\sis457_heladeria\\sis457_heladeria\\Heladeria\\CpHeladeria\\FrmProducto.cs",
+              "RelativeDocumentMoniker": "CpHeladeria\\FrmProducto.cs",
+              "ToolTip": "E:\\SIS457\\sis457_heladeria\\sis457_heladeria\\Heladeria\\CpHeladeria\\FrmProducto.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CpHeladeria\\FrmProducto.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-10T04:31:26.281Z"
             }
           ]
         }

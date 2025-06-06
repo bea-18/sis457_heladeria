@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static CpHeladeria.Util;
 
 namespace CpHeladeria
 {
@@ -50,11 +51,19 @@ namespace CpHeladeria
                 var usuario = UsuarioCln.validar(txtUsuario.Text, Util.Encrypt(txtClave.Text));
                 if (usuario != null)
                 {
-                    Util.usuario = usuario;
-                    txtClave.Clear();
-                    txtUsuario.Focus();
-                    txtUsuario.SelectAll();
-                    new FrmPrincipal().ShowDialog();
+                    //Util.usuario = usuario;
+                    //txtClave.Clear();
+                    //txtUsuario.Focus();
+                    //txtUsuario.SelectAll();
+                    //new FrmPrincipal().ShowDialog();
+                    bool autenticado = true; // aquí confirmas que el usuario es válido
+                    if (autenticado) // si las credenciales son correctas
+                    {
+                        Sesion.Usuario = txtUsuario.Text.Trim(); // guarda el usuario que inició sesión
+                        FrmPrincipal frm = new FrmPrincipal();
+                        frm.Show();
+                        this.Hide();
+                    }
                 }
                 else
                 {

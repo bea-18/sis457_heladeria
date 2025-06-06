@@ -106,5 +106,10 @@ namespace CpHeladeria
                 //if (isMsgTxtMouseDown) MessageBox.Show(msgTxtMouseDown);
             }
         }
+
+        public static class Sesion
+        {
+            public static string Usuario { get; set; }
+        }
     }
 }

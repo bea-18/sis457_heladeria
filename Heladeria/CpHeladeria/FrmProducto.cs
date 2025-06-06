@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static CpHeladeria.Util;
 
 namespace CpHeladeria
 {
@@ -160,9 +161,8 @@ namespace CpHeladeria
                 producto.idproveedor = Convert.ToInt32(cbxProveedor.SelectedValue);
                 producto.presentacion = txtPresentacion.Text.Trim();
                 producto.precio = nudPrecio.Value;
-                producto.usuarioRegistro = "gerente"; // Aquí deberías obtener el usuario actual
+                producto.usuarioRegistro = Sesion.Usuario; // Aquí deberías obtener el usuario que inicio sesion
                 producto.fechaRegistro = DateTime.Now;
-                //producto.estado = 1; // Estado activo por defecto
 
                 if (esNuevo)
                 {
@@ -191,7 +191,7 @@ namespace CpHeladeria
                 "::: Heladeria - Mensaje :::", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
             if (dialog == DialogResult.Yes)
             {
-                ProductoCln.eliminar(id, Util.usuario.usuario1);
+                ProductoCln.eliminar(id, Sesion.Usuario);
                 listar();
                 MessageBox.Show("Producto eliminado correctamente", "::: Heladeria - Mensaje :::",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);

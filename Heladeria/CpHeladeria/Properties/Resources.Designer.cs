@@ -163,6 +163,26 @@ namespace CpHeladeria.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Fonts {
+            get {
+                object obj = ResourceManager.GetObject("Fonts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Fonts2 {
+            get {
+                object obj = ResourceManager.GetObject("Fonts2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap save_icon_icons_com_53618 {
             get {
                 object obj = ResourceManager.GetObject("save_icon-icons.com_53618", resourceCulture);

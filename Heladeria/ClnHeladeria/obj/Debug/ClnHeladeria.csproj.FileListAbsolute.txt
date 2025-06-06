@@ -1,0 +1,15 @@
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\bin\Debug\ClnHeladeria.dll.config
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\bin\Debug\ClnHeladeria.dll
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\bin\Debug\ClnHeladeria.pdb
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\bin\Debug\CadHeladeria.dll
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\bin\Debug\EntityFramework.dll
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\bin\Debug\EntityFramework.SqlServer.dll
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\bin\Debug\CadHeladeria.pdb
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\bin\Debug\CadHeladeria.dll.config
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\bin\Debug\EntityFramework.xml
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\bin\Debug\EntityFramework.SqlServer.xml
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\obj\Debug\ClnHeladeria.csproj.AssemblyReference.cache
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\obj\Debug\ClnHeladeria.csproj.CoreCompileInputs.cache
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\obj\Debug\ClnHelad.05FDB7DE.Up2Date
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\obj\Debug\ClnHeladeria.dll
+D:\SIS457\sis457_heladeria\Heladeria\ClnHeladeria\obj\Debug\ClnHeladeria.pdb

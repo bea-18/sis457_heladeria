@@ -34,31 +34,31 @@
             this.lblParametro = new System.Windows.Forms.Label();
             this.btnNuevo = new System.Windows.Forms.Button();
             this.gbxDatos = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lblRazonSocial = new System.Windows.Forms.Label();
-            this.txtTelefono = new System.Windows.Forms.TextBox();
-            this.lblTelefono = new System.Windows.Forms.Label();
+            this.txtNombre = new System.Windows.Forms.TextBox();
+            this.txtCelular = new System.Windows.Forms.TextBox();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.lblCelular = new System.Windows.Forms.Label();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnGuardar = new System.Windows.Forms.Button();
-            this.txtCI = new System.Windows.Forms.TextBox();
+            this.txtNit = new System.Windows.Forms.TextBox();
             this.lblNit = new System.Windows.Forms.Label();
             this.btnEditar = new System.Windows.Forms.Button();
             this.pnlAcciones = new System.Windows.Forms.Panel();
             this.btnCerrar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.erpRazonSocial = new System.Windows.Forms.ErrorProvider(this.components);
-            this.erpCi = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpCelular = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpNombre = new System.Windows.Forms.ErrorProvider(this.components);
             this.gbxLista = new System.Windows.Forms.GroupBox();
             this.dgvLista = new System.Windows.Forms.DataGridView();
-            this.erpTelefono = new System.Windows.Forms.ErrorProvider(this.components);
+            this.erpNit = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblClientes = new System.Windows.Forms.Label();
             this.gbxDatos.SuspendLayout();
             this.pnlAcciones.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.erpRazonSocial)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpCi)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpCelular)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpNombre)).BeginInit();
             this.gbxLista.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpTelefono)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpNit)).BeginInit();
             this.SuspendLayout();
             // 
             // btnBuscar
@@ -87,9 +87,9 @@
             this.lblParametro.AutoSize = true;
             this.lblParametro.Location = new System.Drawing.Point(14, 42);
             this.lblParametro.Name = "lblParametro";
-            this.lblParametro.Size = new System.Drawing.Size(263, 13);
+            this.lblParametro.Size = new System.Drawing.Size(125, 13);
             this.lblParametro.TabIndex = 29;
-            this.lblParametro.Text = "Buscar: Cédula de Identidad, Razón Social y Teléfono";
+            this.lblParametro.Text = "Buscar por Nombre y Nit;";
             // 
             // btnNuevo
             // 
@@ -103,16 +103,17 @@
             this.btnNuevo.Text = "Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnNuevo.UseVisualStyleBackColor = true;
+            this.btnNuevo.Click += new System.EventHandler(this.btnNuevo_Click);
             // 
             // gbxDatos
             // 
-            this.gbxDatos.Controls.Add(this.textBox1);
-            this.gbxDatos.Controls.Add(this.lblRazonSocial);
-            this.gbxDatos.Controls.Add(this.txtTelefono);
-            this.gbxDatos.Controls.Add(this.lblTelefono);
+            this.gbxDatos.Controls.Add(this.txtNombre);
+            this.gbxDatos.Controls.Add(this.txtCelular);
+            this.gbxDatos.Controls.Add(this.lblNombre);
+            this.gbxDatos.Controls.Add(this.lblCelular);
             this.gbxDatos.Controls.Add(this.btnCancelar);
             this.gbxDatos.Controls.Add(this.btnGuardar);
-            this.gbxDatos.Controls.Add(this.txtCI);
+            this.gbxDatos.Controls.Add(this.txtNit);
             this.gbxDatos.Controls.Add(this.lblNit);
             this.gbxDatos.Location = new System.Drawing.Point(14, 323);
             this.gbxDatos.Name = "gbxDatos";
@@ -121,39 +122,39 @@
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos";
             // 
-            // textBox1
+            // txtNombre
             // 
-            this.textBox1.Location = new System.Drawing.Point(143, 76);
-            this.textBox1.MaxLength = 8;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(147, 20);
-            this.textBox1.TabIndex = 20;
+            this.txtNombre.Location = new System.Drawing.Point(143, 14);
+            this.txtNombre.MaxLength = 8;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(147, 20);
+            this.txtNombre.TabIndex = 21;
             // 
-            // lblRazonSocial
+            // txtCelular
             // 
-            this.lblRazonSocial.AutoSize = true;
-            this.lblRazonSocial.Location = new System.Drawing.Point(48, 76);
-            this.lblRazonSocial.Name = "lblRazonSocial";
-            this.lblRazonSocial.Size = new System.Drawing.Size(73, 13);
-            this.lblRazonSocial.TabIndex = 19;
-            this.lblRazonSocial.Text = "Razón Social:";
+            this.txtCelular.Location = new System.Drawing.Point(143, 82);
+            this.txtCelular.MaxLength = 8;
+            this.txtCelular.Name = "txtCelular";
+            this.txtCelular.Size = new System.Drawing.Size(147, 20);
+            this.txtCelular.TabIndex = 20;
             // 
-            // txtTelefono
+            // lblNombre
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(143, 46);
-            this.txtTelefono.MaxLength = 8;
-            this.txtTelefono.Name = "txtTelefono";
-            this.txtTelefono.Size = new System.Drawing.Size(147, 20);
-            this.txtTelefono.TabIndex = 6;
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Location = new System.Drawing.Point(82, 17);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(47, 13);
+            this.lblNombre.TabIndex = 19;
+            this.lblNombre.Text = "Nombre:";
             // 
-            // lblTelefono
+            // lblCelular
             // 
-            this.lblTelefono.AutoSize = true;
-            this.lblTelefono.Location = new System.Drawing.Point(71, 46);
-            this.lblTelefono.Name = "lblTelefono";
-            this.lblTelefono.Size = new System.Drawing.Size(52, 13);
-            this.lblTelefono.TabIndex = 17;
-            this.lblTelefono.Text = "Teléfono:";
+            this.lblCelular.AutoSize = true;
+            this.lblCelular.Location = new System.Drawing.Point(87, 85);
+            this.lblCelular.Name = "lblCelular";
+            this.lblCelular.Size = new System.Drawing.Size(42, 13);
+            this.lblCelular.TabIndex = 17;
+            this.lblCelular.Text = "Celular:";
             // 
             // btnCancelar
             // 
@@ -167,6 +168,7 @@
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // btnGuardar
             // 
@@ -181,22 +183,22 @@
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnGuardar.UseVisualStyleBackColor = true;
             // 
-            // txtCI
+            // txtNit
             // 
-            this.txtCI.Location = new System.Drawing.Point(143, 14);
-            this.txtCI.MaxLength = 30;
-            this.txtCI.Name = "txtCI";
-            this.txtCI.Size = new System.Drawing.Size(148, 20);
-            this.txtCI.TabIndex = 2;
+            this.txtNit.Location = new System.Drawing.Point(142, 46);
+            this.txtNit.MaxLength = 30;
+            this.txtNit.Name = "txtNit";
+            this.txtNit.Size = new System.Drawing.Size(148, 20);
+            this.txtNit.TabIndex = 2;
             // 
             // lblNit
             // 
             this.lblNit.AutoSize = true;
-            this.lblNit.Location = new System.Drawing.Point(93, 16);
+            this.lblNit.Location = new System.Drawing.Point(101, 49);
             this.lblNit.Name = "lblNit";
-            this.lblNit.Size = new System.Drawing.Size(26, 13);
+            this.lblNit.Size = new System.Drawing.Size(28, 13);
             this.lblNit.TabIndex = 2;
-            this.lblNit.Text = "C.I.:";
+            this.lblNit.Text = "NIT:";
             // 
             // btnEditar
             // 
@@ -234,6 +236,7 @@
             this.btnCerrar.Text = "Cerrar";
             this.btnCerrar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnCerrar.UseVisualStyleBackColor = true;
+            this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
             // 
             // btnEliminar
             // 
@@ -248,13 +251,13 @@
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnEliminar.UseVisualStyleBackColor = true;
             // 
-            // erpRazonSocial
+            // erpCelular
             // 
-            this.erpRazonSocial.ContainerControl = this;
+            this.erpCelular.ContainerControl = this;
             // 
-            // erpCi
+            // erpNombre
             // 
-            this.erpCi.ContainerControl = this;
+            this.erpNombre.ContainerControl = this;
             // 
             // gbxLista
             // 
@@ -279,9 +282,9 @@
             this.dgvLista.Size = new System.Drawing.Size(783, 150);
             this.dgvLista.TabIndex = 0;
             // 
-            // erpTelefono
+            // erpNit
             // 
-            this.erpTelefono.ContainerControl = this;
+            this.erpNit.ContainerControl = this;
             // 
             // lblClientes
             // 
@@ -308,14 +311,15 @@
             this.Controls.Add(this.lblClientes);
             this.Name = "FrmCliente";
             this.Text = "Cliente - Heladeria";
+            this.Load += new System.EventHandler(this.FrmCliente_Load);
             this.gbxDatos.ResumeLayout(false);
             this.gbxDatos.PerformLayout();
             this.pnlAcciones.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.erpRazonSocial)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpCi)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpCelular)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpNombre)).EndInit();
             this.gbxLista.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLista)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.erpTelefono)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.erpNit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -328,23 +332,23 @@
         private System.Windows.Forms.Label lblParametro;
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.GroupBox gbxDatos;
-        private System.Windows.Forms.Label lblRazonSocial;
-        private System.Windows.Forms.TextBox txtTelefono;
-        private System.Windows.Forms.Label lblTelefono;
+        private System.Windows.Forms.Label lblNombre;
+        private System.Windows.Forms.Label lblCelular;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.TextBox txtCI;
+        private System.Windows.Forms.TextBox txtNit;
         private System.Windows.Forms.Label lblNit;
         private System.Windows.Forms.Button btnEditar;
         private System.Windows.Forms.Panel pnlAcciones;
         private System.Windows.Forms.Button btnCerrar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.ErrorProvider erpRazonSocial;
+        private System.Windows.Forms.ErrorProvider erpCelular;
         private System.Windows.Forms.GroupBox gbxLista;
         private System.Windows.Forms.DataGridView dgvLista;
         private System.Windows.Forms.Label lblClientes;
-        private System.Windows.Forms.ErrorProvider erpCi;
-        private System.Windows.Forms.ErrorProvider erpTelefono;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ErrorProvider erpNombre;
+        private System.Windows.Forms.ErrorProvider erpNit;
+        private System.Windows.Forms.TextBox txtCelular;
+        private System.Windows.Forms.TextBox txtNombre;
     }
 }

@@ -16,5 +16,26 @@ namespace CpHeladeria
         {
             InitializeComponent();
         }
+
+        private void FrmCliente_Load(object sender, EventArgs e)
+        {
+            Size = new Size(835, 362);
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Size = new Size(835, 362);
+        }
+
+        private void btnNuevo_Click(object sender, EventArgs e)
+        {
+            Size = new Size(835, 487);
+            txtNombre.Focus();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

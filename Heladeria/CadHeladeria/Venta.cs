@@ -24,7 +24,9 @@ namespace CadHeladeria
         public int idUsuario { get; set; }
         public int idCliente { get; set; }
         public string tipoPago { get; set; }
-        public System.DateTime fecha { get; set; }
+        public decimal montoPago { get; set; }
+        public decimal montoCambio { get; set; }
+        public decimal montoTotal { get; set; }
         public string usuarioRegistro { get; set; }
         public System.DateTime fechaRegistro { get; set; }
         public short estado { get; set; }

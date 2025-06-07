@@ -98,7 +98,7 @@
             // 
             this.btnNuevo.Image = global::CpHeladeria.Properties.Resources.file_new_14966;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(179, 3);
+            this.btnNuevo.Location = new System.Drawing.Point(15, 4);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnNuevo.Size = new System.Drawing.Size(98, 40);
@@ -118,9 +118,9 @@
             this.gbxDatos.Controls.Add(this.btnGuardar);
             this.gbxDatos.Controls.Add(this.txtNit);
             this.gbxDatos.Controls.Add(this.lblNit);
-            this.gbxDatos.Location = new System.Drawing.Point(14, 323);
+            this.gbxDatos.Location = new System.Drawing.Point(20, 323);
             this.gbxDatos.Name = "gbxDatos";
-            this.gbxDatos.Size = new System.Drawing.Size(795, 115);
+            this.gbxDatos.Size = new System.Drawing.Size(783, 115);
             this.gbxDatos.TabIndex = 34;
             this.gbxDatos.TabStop = false;
             this.gbxDatos.Text = "Datos";
@@ -163,7 +163,7 @@
             // 
             this.btnCancelar.Image = global::CpHeladeria.Properties.Resources.Cancel_27012;
             this.btnCancelar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCancelar.Location = new System.Drawing.Point(672, 71);
+            this.btnCancelar.Location = new System.Drawing.Point(493, 49);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnCancelar.Size = new System.Drawing.Size(111, 40);
@@ -177,7 +177,7 @@
             // 
             this.btnGuardar.Image = global::CpHeladeria.Properties.Resources.save_icon_icons_com_53618;
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnGuardar.Location = new System.Drawing.Point(561, 71);
+            this.btnGuardar.Location = new System.Drawing.Point(360, 49);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnGuardar.Size = new System.Drawing.Size(105, 40);
@@ -208,7 +208,7 @@
             // 
             this.btnEditar.Image = global::CpHeladeria.Properties.Resources._1486564394_edit_81508;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(283, 3);
+            this.btnEditar.Location = new System.Drawing.Point(142, 4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnEditar.Size = new System.Drawing.Size(98, 40);
@@ -224,16 +224,16 @@
             this.pnlAcciones.Controls.Add(this.btnEliminar);
             this.pnlAcciones.Controls.Add(this.btnEditar);
             this.pnlAcciones.Controls.Add(this.btnNuevo);
-            this.pnlAcciones.Location = new System.Drawing.Point(14, 274);
+            this.pnlAcciones.Location = new System.Drawing.Point(164, 270);
             this.pnlAcciones.Name = "pnlAcciones";
-            this.pnlAcciones.Size = new System.Drawing.Size(795, 47);
+            this.pnlAcciones.Size = new System.Drawing.Size(498, 47);
             this.pnlAcciones.TabIndex = 33;
             // 
             // btnCerrar
             // 
             this.btnCerrar.Image = global::CpHeladeria.Properties.Resources.vcsremoved_103741;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(495, 3);
+            this.btnCerrar.Location = new System.Drawing.Point(384, 7);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnCerrar.Size = new System.Drawing.Size(96, 40);
@@ -247,7 +247,7 @@
             // 
             this.btnEliminar.Image = global::CpHeladeria.Properties.Resources._1486504830_delete_dustbin_empty_recycle_recycling_remove_trash_81361;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(387, 3);
+            this.btnEliminar.Location = new System.Drawing.Point(267, 7);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnEliminar.Size = new System.Drawing.Size(102, 40);
@@ -295,9 +295,9 @@
             // lblClientes
             // 
             this.lblClientes.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblClientes.Location = new System.Drawing.Point(9, 11);
+            this.lblClientes.Location = new System.Drawing.Point(276, 13);
             this.lblClientes.Name = "lblClientes";
-            this.lblClientes.Size = new System.Drawing.Size(800, 31);
+            this.lblClientes.Size = new System.Drawing.Size(258, 31);
             this.lblClientes.TabIndex = 28;
             this.lblClientes.Text = "Clientes";
             this.lblClientes.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -307,6 +307,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.RosyBrown;
+            this.BackgroundImage = global::CpHeladeria.Properties.Resources._20250606_1843_image;
             this.ClientSize = new System.Drawing.Size(819, 448);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtParametro);

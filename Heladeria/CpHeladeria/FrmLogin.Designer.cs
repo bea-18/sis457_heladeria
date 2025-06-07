@@ -59,7 +59,7 @@
             this.lbTitulo.BackColor = System.Drawing.Color.Transparent;
             this.lbTitulo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.lbTitulo.Font = new System.Drawing.Font("Comic Sans MS", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTitulo.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lbTitulo.ForeColor = System.Drawing.Color.Black;
             this.lbTitulo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.lbTitulo.Location = new System.Drawing.Point(92, 9);
             this.lbTitulo.Name = "lbTitulo";
@@ -71,7 +71,7 @@
             // lblUsuario
             // 
             this.lblUsuario.AutoSize = true;
-            this.lblUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lblUsuario.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblUsuario.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.Location = new System.Drawing.Point(11, 75);
             this.lblUsuario.Name = "lblUsuario";
@@ -90,7 +90,7 @@
             // lblClave
             // 
             this.lblClave.AutoSize = true;
-            this.lblClave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.lblClave.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.lblClave.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblClave.Location = new System.Drawing.Point(11, 113);
             this.lblClave.Name = "lblClave";
@@ -111,7 +111,7 @@
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.ErrorImage = null;
-            this.pictureBox1.Image = global::CpHeladeria.Properties.Resources.data_hosting_internet_lock_security_server_storage_icon_127054;
+            this.pictureBox1.Image = global::CpHeladeria.Properties.Resources.Diseño_sin_título;
             this.pictureBox1.Location = new System.Drawing.Point(317, 46);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(131, 132);
@@ -122,7 +122,7 @@
             // btnCancelar
             // 
             this.btnCancelar.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.btnCancelar.BackColor = System.Drawing.Color.Salmon;
+            this.btnCancelar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnCancelar.FlatAppearance.BorderColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnCancelar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCancelar.Image = global::CpHeladeria.Properties.Resources.Cancel_27012;
@@ -138,7 +138,7 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.BackColor = System.Drawing.Color.Salmon;
+            this.btnIngresar.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.btnIngresar.Font = new System.Drawing.Font("Comic Sans MS", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.Image = global::CpHeladeria.Properties.Resources.Button_Ok_01_25121;
             this.btnIngresar.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -156,6 +156,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Tomato;
+            this.BackgroundImage = global::CpHeladeria.Properties.Resources._20250606_0436_image;
             this.ClientSize = new System.Drawing.Size(458, 288);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.txtClave);

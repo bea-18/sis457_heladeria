@@ -14,9 +14,9 @@ namespace CadHeladeria
     public partial class paVentaListar_Result
     {
         public int id { get; set; }
-        public System.DateTime fecha { get; set; }
         public string tipoPago { get; set; }
         public string usuario { get; set; }
         public string Cliente { get; set; }
+        public decimal montoTotal { get; set; }
     }
 }

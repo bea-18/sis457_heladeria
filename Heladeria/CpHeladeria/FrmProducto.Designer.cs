@@ -92,9 +92,9 @@
             // lblTitulo
             // 
             this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitulo.Location = new System.Drawing.Point(9, 11);
+            this.lblTitulo.Location = new System.Drawing.Point(292, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(800, 31);
+            this.lblTitulo.Size = new System.Drawing.Size(234, 31);
             this.lblTitulo.TabIndex = 21;
             this.lblTitulo.Text = "Productos";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -305,7 +305,7 @@
             // 
             this.btnCerrar.Image = global::CpHeladeria.Properties.Resources.vcsremoved_103741;
             this.btnCerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCerrar.Location = new System.Drawing.Point(495, 3);
+            this.btnCerrar.Location = new System.Drawing.Point(325, 4);
             this.btnCerrar.Name = "btnCerrar";
             this.btnCerrar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnCerrar.Size = new System.Drawing.Size(96, 40);
@@ -319,7 +319,7 @@
             // 
             this.btnEliminar.Image = global::CpHeladeria.Properties.Resources._1486504830_delete_dustbin_empty_recycle_recycling_remove_trash_81361;
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEliminar.Location = new System.Drawing.Point(387, 3);
+            this.btnEliminar.Location = new System.Drawing.Point(217, 4);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnEliminar.Size = new System.Drawing.Size(102, 40);
@@ -333,7 +333,7 @@
             // 
             this.btnEditar.Image = global::CpHeladeria.Properties.Resources._1486564394_edit_81508;
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnEditar.Location = new System.Drawing.Point(283, 3);
+            this.btnEditar.Location = new System.Drawing.Point(113, 4);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnEditar.Size = new System.Drawing.Size(98, 40);
@@ -347,7 +347,7 @@
             // 
             this.btnNuevo.Image = global::CpHeladeria.Properties.Resources.file_new_14966;
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnNuevo.Location = new System.Drawing.Point(179, 3);
+            this.btnNuevo.Location = new System.Drawing.Point(9, 3);
             this.btnNuevo.Name = "btnNuevo";
             this.btnNuevo.Padding = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.btnNuevo.Size = new System.Drawing.Size(98, 40);
@@ -367,9 +367,9 @@
             this.pnlAcciones.Controls.Add(this.btnEliminar);
             this.pnlAcciones.Controls.Add(this.btnEditar);
             this.pnlAcciones.Controls.Add(this.btnNuevo);
-            this.pnlAcciones.Location = new System.Drawing.Point(14, 274);
+            this.pnlAcciones.Location = new System.Drawing.Point(192, 274);
             this.pnlAcciones.Name = "pnlAcciones";
-            this.pnlAcciones.Size = new System.Drawing.Size(795, 47);
+            this.pnlAcciones.Size = new System.Drawing.Size(434, 47);
             this.pnlAcciones.TabIndex = 26;
             // 
             // FrmProducto
@@ -377,6 +377,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Wheat;
+            this.BackgroundImage = global::CpHeladeria.Properties.Resources._20250606_1847_image;
             this.ClientSize = new System.Drawing.Size(819, 448);
             this.Controls.Add(this.txtParametro);
             this.Controls.Add(this.lblParametro);

@@ -23,7 +23,7 @@ namespace CpHeladeria
 
         private void listar()
         {
-            var lista = ClnHeladeria.ClienteCln.listar();
+            var lista = ClienteCln.listar(txtParametro.Text.Trim());
             dgvLista.DataSource = lista;
             dgvLista.Columns["id"].Visible = false;
             dgvLista.Columns["estado"].Visible = false;
@@ -89,7 +89,7 @@ namespace CpHeladeria
 
         private void txtParametro_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (e.KeyChar == (char)Keys.Enter) listar();
+            if(e.KeyChar == (char)Keys.Enter) listar();
         }
 
         private bool validar()

@@ -38,10 +38,12 @@ CREATE TABLE Proveedor (
 CREATE TABLE Producto (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
   nombre VARCHAR(100) NOT NULL,
-  sabor VARCHAR(50) NOT NULL,
-  proveedor VARCHAR(100) NOT NULL,
+  idsabor INT NOT NULL,
+  idproveedor INT NOT NULL,
   presentacion VARCHAR(100) NULL,
   precio DECIMAL(10,2) NOT NULL CHECK (precio > 0),
+  CONSTRAINT fk_Producto_Sabor FOREIGN KEY(idsabor) REFERENCES Sabor(id),
+  CONSTRAINT fk_Producto_Proveedor FOREIGN KEY(idproveedor) REFERENCES Proveedor(id)
 );
 CREATE TABLE Empleado (
   id INT NOT NULL PRIMARY KEY IDENTITY(1,1),
@@ -71,7 +73,9 @@ CREATE TABLE Venta (
   idUsuario INT NOT NULL,
   idCliente INT NOT NULL,
   tipoPago VARCHAR(50) NOT NULL,
-  fecha DATE NOT NULL DEFAULT GETDATE(),
+  montoPago DECIMAL(10,2) NOT NULL,
+  montoCambio DECIMAL(10,2) NOT NULL,
+  montoTotal DECIMAL(10,2) NOT NULL,
   CONSTRAINT fk_Venta_Usuario FOREIGN KEY(idUsuario) REFERENCES Usuario(id),
   CONSTRAINT fk_Venta_Cliente FOREIGN KEY(idCliente) REFERENCES Cliente(id)
 );
@@ -131,14 +135,24 @@ ALTER PROC paProveedorListar @parametro VARCHAR(100)
 AS
   SELECT * FROM Proveedor
   WHERE estado<>-1 AND razonSocial+nit+telefono LIKE '%'+REPLACE(@parametro,' ','%')+'%'
-  ORDER BY estado DESC, nombre ASC;
+  ORDER BY estado DESC, razonSocial ASC;
 
 GO
 ALTER PROC paProductoListar @parametro VARCHAR(100)
 AS
-  SELECT * FROM Producto
-  WHERE estado<>-1 AND nombre+sabor LIKE '%'+REPLACE(@parametro,' ','%')+'%'
-  ORDER BY estado DESC, nombre ASC;
+  SELECT p.id, p.nombre, s.nombre AS sabor, pr.razonSocial AS proveedor, p.presentacion, p.precio,
+		 p.usuarioRegistro, p.fechaRegistro, p.estado
+  FROM Producto p
+  JOIN Sabor s ON p.idsabor = s.id
+  JOIN Proveedor pr ON p.idproveedor = pr.id
+  WHERE p.estado<>-1 
+	AND (p.nombre + s.nombre + pr.razonSocial) LIKE '%'+REPLACE(@parametro,' ','%')+'%'
+  ORDER BY p.estado DESC, p.nombre ASC;
+--ALTER PROC paProductoListar @parametro VARCHAR(100)
+--AS
+--  SELECT * FROM Producto
+--  WHERE estado<>-1 AND nombre+sabor LIKE '%'+REPLACE(@parametro,' ','%')+'%'
+--  ORDER BY estado DESC, nombre ASC;
 
 GO
 ALTER PROC paEmpleadoListar @parametro VARCHAR(100)
@@ -158,13 +172,22 @@ AS
   ORDER BY nombre ASC;
 
 GO
+--ALTER PROC paVentaListar @parametro VARCHAR(100)
+--AS
+--  SELECT v.id, v.fecha, v.tipoPago, ISNULL(u.usuario, '--') AS usuario, c.nombre AS Cliente
+--  FROM Venta v
+--  LEFT JOIN Usuario u ON v.idUsuario = u.id
+--  LEFT JOIN Cliente c ON v.idCliente = c.id
+--  WHERE v.estado<>-1
+--   AND ISNULL(u.usuario, '') + ISNULL(v.tipoPago, '') + ISNULL(c.nombre, '') LIKE '%'+REPLACE(@parametro,' ','%')+'%'
+--  ORDER BY v.tipoPago DESC;
 ALTER PROC paVentaListar @parametro VARCHAR(100)
 AS
-  SELECT v.id, v.fecha, v.tipoPago, ISNULL(u.usuario, '--') AS usuario, c.nombre AS Cliente
+  SELECT v.id, v.tipoPago, ISNULL(u.usuario, '--') AS usuario, c.nombre AS Cliente, v.montoTotal
   FROM Venta v
   LEFT JOIN Usuario u ON v.idUsuario = u.id
   LEFT JOIN Cliente c ON v.idCliente = c.id
-  WHERE v.estado<>-1
+  WHERE v.estado<>-1 
    AND ISNULL(u.usuario, '') + ISNULL(v.tipoPago, '') + ISNULL(c.nombre, '') LIKE '%'+REPLACE(@parametro,' ','%')+'%'
   ORDER BY v.tipoPago DESC;
 
@@ -179,18 +202,21 @@ AS
    AND ISNULL(vd.cantidad, '') + ISNULL(p.nombre, '') + ISNULL(v.tipoPago, '') LIKE '%'+REPLACE(@parametro,' ','%')+'%'
   ORDER BY vd.cantidad DESC;
 
--- DML
---INSERT INTO Sabor (nombre)
---VALUES ('Manzana'), ('Frutilla'), ('Naranja'), ('Banana'), ('Limón');
+ --DML
+INSERT INTO Sabor (nombre)
+VALUES ('Manzana'), ('Frutilla'), ('Naranja'), ('Banana'), ('Limón');
 
---INSERT INTO Proveedor(razonSocial, nit, telefono, direccion, tipoProducto)
---VALUES ('Frutas Frescas S.A.', '456789123', '555-111', 'Calle 1', 'Frutas Dulces'),  --Frutas dulces: Banana, Manzana roja
---	   ('Cítricos del Sol S.R.L.', '987654321', '555-2222', 'Avenida 2', 'Frutas Cítricas'), --Frutas cítricas: Naranja, Limón
---	   ('Exquisitas Frutas S.A.', '800654321', '555-3333', 'Boulevard 3', 'Frutas Semiácidas'); --Frutas semiácidas: Frutilla
+INSERT INTO Proveedor(razonSocial, nit, telefono, direccion, tipoProducto)
+VALUES ('Frutas Frescas S.A.', '456789123', '555-111', 'Calle 1', 'Frutas Dulces'),  
+	   ('Cítricos del Sol S.R.L.', '987654321', '555-2222', 'Avenida 2', 'Frutas Cítricas'), 
+	   ('Exquisitas Frutas S.A.', '800654321', '555-3333', 'Boulevard 3', 'Frutas Semiácidas');
+	   --Frutas dulces: Banana, Manzana roja
+	   --Frutas cítricas: Naranja, Limón
+	   --Frutas semiácidas: Frutilla
 
-INSERT INTO Producto (nombre, sabor, proveedor, presentacion, precio)
-VALUES ('Helado', 'Manzana', 'Frutas Frescas S.A.', 'Vaso de plástico 250 ml', 12.00),
-	   ('Helado', 'Frutilla', 'Exquisitas Frutas S.A.', 'Cono', 8.00);
+INSERT INTO Producto (nombre, idsabor, idproveedor, presentacion, precio)
+VALUES ('Helado', 1, 1, 'Vaso de plástico 250 ml', 12.00),
+	   ('Helado', 2, 3, 'Cono', 8.00);
 
 	   --('Helado', 'Naranja', 'Cítricos del Sol S.R.L.', 'Vasito de plástico 500 ml', 15.00),
 	   --('Helado', 'Banana', 'Frutas Frescas S.A.', 'Tarrina de cartón 1 L', 20.00),
@@ -207,8 +233,8 @@ UPDATE Usuario SET clave = 'Fo29nhWFgz6S2F47mbGlbA==' WHERE idEmpleado = 1;
 INSERT INTO Cliente (nombre, nit, celular)
 VALUES ('Mateo', '987654321', '72345678');
 
-INSERT INTO Venta (idUsuario, idCliente, tipoPago)
-VALUES (1, 1, 'Efectivo');
+INSERT INTO Venta (idUsuario, idCliente, tipoPago, montoPago, montoCambio, montoTotal)
+VALUES (1, 1, 'Efectivo', 20.00, 5.00, 15.00);
 
 INSERT INTO VentaDetalle (idVenta, idProducto, cantidad, precioUnitario, total)
 VALUES (1, 1, 2, 12.00, 24.00),

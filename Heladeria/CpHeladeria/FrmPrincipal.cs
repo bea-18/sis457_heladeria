@@ -26,5 +26,10 @@ namespace CpHeladeria
         {
             new FrmCliente().ShowDialog();
         }
+
+        private void btnVentas_Click(object sender, EventArgs e)
+        {
+            new FrmVenta().ShowDialog();
+        }
     }
 }

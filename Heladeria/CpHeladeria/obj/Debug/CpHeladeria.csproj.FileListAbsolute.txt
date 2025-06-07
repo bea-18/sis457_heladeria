@@ -20,6 +20,15 @@ E:\SIS457\sis457_heladeria\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHe
 E:\SIS457\sis457_heladeria\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmSabor.resources
 E:\SIS457\sis457_heladeria\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmVenta.resources
 E:\SIS457\sis457_heladeria\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmVentaDetalle.resources
+E:\SIS457\sis457_heladeria\sis457_heladeria\Heladeria\CpHeladeria\bin\Debug\CadHeladeria.dll
+E:\SIS457\sis457_heladeria\sis457_heladeria\Heladeria\CpHeladeria\bin\Debug\ClnHeladeria.dll
+E:\SIS457\sis457_heladeria\sis457_heladeria\Heladeria\CpHeladeria\bin\Debug\CadHeladeria.pdb
+E:\SIS457\sis457_heladeria\sis457_heladeria\Heladeria\CpHeladeria\bin\Debug\CadHeladeria.dll.config
+E:\SIS457\sis457_heladeria\sis457_heladeria\Heladeria\CpHeladeria\bin\Debug\ClnHeladeria.pdb
+E:\SIS457\sis457_heladeria\sis457_heladeria\Heladeria\CpHeladeria\bin\Debug\ClnHeladeria.dll.config
+E:\SIS457\sis457_heladeria\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.exe.config
+E:\SIS457\sis457_heladeria\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmLogin.resources
+E:\SIS457\sis457_heladeria\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmPrincipal.resources
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\bin\Debug\CpHeladeria.exe.config
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\bin\Debug\CpHeladeria.exe
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\bin\Debug\CpHeladeria.pdb
@@ -37,7 +46,7 @@ D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.csproj.As
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmCliente.resources
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmEmpleado.resources
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmLogin.resources
-D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmPedido.resources
+D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmPrincipal.resources
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmProducto.resources
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmProveedor.resources
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmSabor.resources
@@ -50,4 +59,3 @@ D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHelade.B5025E5C.Up2
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.exe
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.pdb
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.exe.config
-D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.FrmPrincipal.resources

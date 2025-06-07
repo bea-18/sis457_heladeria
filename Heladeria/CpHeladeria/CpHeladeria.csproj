@@ -36,15 +36,28 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="C1.C1Report.4, Version=4.0.20193.393, Culture=neutral, PublicKeyToken=594a0605db190bb9, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.2, Version=2.0.20193.393, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
+    <Reference Include="C1.Win.4, Version=4.0.20193.393, Culture=neutral, PublicKeyToken=944ae1ea0e47ca04" />
+    <Reference Include="C1.Win.BarCode.4, Version=4.0.20193.393, Culture=neutral, PublicKeyToken=79882d576c6336da" />
+    <Reference Include="C1.Win.C1Command.2, Version=2.0.20193.393, Culture=neutral, PublicKeyToken=e808566f358766d8" />
+    <Reference Include="C1.Win.C1Input.2, Version=2.0.20193.393, Culture=neutral, PublicKeyToken=7e7ff60f0c214f9a, processorArchitecture=MSIL" />
+    <Reference Include="C1.Win.C1Ribbon.4, Version=4.0.20193.393, Culture=neutral, PublicKeyToken=79882d576c6336da, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.5.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="ReachFramework" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -54,6 +67,7 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FrmCliente.cs">
@@ -73,12 +87,6 @@
     </Compile>
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmPedido.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmPedido.Designer.cs">
-      <DependentUpon>FrmPedido.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -127,9 +135,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmPedido.resx">
-      <DependentUpon>FrmPedido.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -227,6 +232,105 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Fonts2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diseño sin título.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20250606_0436_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\envase frutilla.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cono naranja.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\copa manzana.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondopro.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20250606_1847_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20250606_1847_image1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\20250606_1843_image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icecream4_122441.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\employee__icon-icons.com_76984.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconfinder-factory-3992944_112593.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fruits_96835.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Shopping-icon_30277.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Sales-by-payment-method_25410.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blueboxwipfolder_azul_caja_wip_12411.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rotation_102346.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconview_6283.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lock_private_key_19662.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3890929-chart-growth-invest-market-stock_111188.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\founder_icon-icons.com_76996.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\factory_115122.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1488492642-people07_81742.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clock_timer_time_calendar_date_schedule_hourglass_stopwatch_deadline_icon_231905.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\-ice-cream_89753.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\date_512x512_35979.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shopping_icon_194144.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\shoppingcart_77968.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_Manual-80_icon-icons.com_57245.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\communication_information_aid_disclaimer_customer_service_about_guide_help_info_icon_210836.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\tienda-online.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\venta.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

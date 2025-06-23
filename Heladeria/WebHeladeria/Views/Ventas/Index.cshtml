@@ -1,0 +1,172 @@
+﻿@* @model IEnumerable<WebHeladeria.Models.Ventum>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.IdClienteNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdTipoPagoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MontoTotal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MontoPago)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MontoCambio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UsuarioRegistro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaRegistro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Estado)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdClienteNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdTipoPagoNavigation)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IdUsuarioNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MontoTotal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MontoPago)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MontoCambio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioRegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdClienteNavigation.Nit)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdTipoPagoNavigation.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdUsuarioNavigation.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+ *@
+
+@model IEnumerable<WebHeladeria.Models.Ventum>
+
+@{
+    ViewData["Title"] = "Ventas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="mb-4 text-center" style="color:#8B005D;">Ventas</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-rosa-claro text-white">
+        <i class="fa fa-plus"></i> Registrar Venta
+    </a>
+</p>
+
+<table class="table" style="background-color: #fff0f5; color: #8B005D;">
+    <thead style="background-color: #f497b6; color: white;">
+        <tr>
+            <th>Cliente</th>
+            <th>Tipo de Pago</th>
+            <th>Monto Total</th>
+            <th>Monto Pago</th>
+            <th>Cambio</th>
+            <th>Usuario Registro</th>
+            <th>Fecha Registro</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@(item.IdClienteNavigation?.Nombre ?? "N/A")</td>
+                <td>@(item.IdTipoPagoNavigation?.Descripcion ?? "N/A")</td>
+                <td>@item.MontoTotal.ToString("C")</td>
+                <td>@item.MontoPago.ToString("C")</td>
+                <td>@item.MontoCambio.ToString("C")</td>
+                <td>@item.UsuarioRegistro</td>
+                <td>@item.FechaRegistro.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>
+                    @if (item.Estado == 1)
+                    {
+                        <span class="badge bg-success">Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">Inactivo</span>
+                    }
+                </td>
+                <td>
+                    <div class="d-flex acciones-botones">
+                        <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-editar me-2">
+                            <i class="fa fa-pencil"></i> Editar
+                        </a>
+                        <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-detalles me-2">
+                            <i class="fa fa-eye"></i> Detalles
+                        </a>
+                        <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-eliminar">
+                            <i class="fa fa-trash"></i> Eliminar
+                        </a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .btn-rosa-claro {
+        background-color: #f497b6;
+        border-color: #f497b6;
+    }
+
+        .btn-rosa-claro:hover {
+            background-color: #e06a8a;
+            border-color: #e06a8a;
+            color: white;
+        }
+</style>

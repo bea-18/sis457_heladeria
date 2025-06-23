@@ -1,0 +1,155 @@
+﻿@* @model IEnumerable<WebHeladeria.Models.Producto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Crear Producto</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Sabor</th>
+            <th>Presentación</th>
+            <th>Precio</th>
+            <th>Proveedor</th>
+            <th>Usuario Registro</th>
+            <th>Fecha Registro</th>
+            <th>Estado</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdSaborNavigation.Nombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdPresentacionNavigation.Descripcion)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Precio)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IdProveedorNavigation.RazonSocial)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UsuarioRegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaRegistro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Estado)
+            </td>
+            <td>
+                    <div class="d-flex acciones-botones">
+                        <div class="d-flex justify-content-start">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-editar me-2">
+                                <i class="fa fa-pencil"></i> Editar
+                            </a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-detalles me-2">
+                                <i class="fa fa-eye"></i> Detalles
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-eliminar">
+                                <i class="fa fa-trash"></i> Eliminar
+                            </a>
+                        </div>
+                    </div>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+ *@
+@model IEnumerable<WebHeladeria.Models.Producto>
+
+@{
+    ViewData["Title"] = "Lista de Productos";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1 class="mb-4 text-center" style="color:#8B005D;">Productos</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-rosa-claro text-white">
+        <i class="fa fa-plus"></i> Crear Producto
+    </a>
+</p>
+
+<table class="table" style="background-color: #fff0f5; color: #8B005D;">
+    <thead style="background-color: #f497b6; color: white;">
+        <tr>
+            <th>Nombre</th>
+            <th>Sabor</th>
+            <th>Presentación</th>
+            <th>Precio</th>
+            <th>Proveedor</th>
+            <th>Usuario Registro</th>
+            <th>Fecha Registro</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Nombre</td>
+                <td>@(item.IdSaborNavigation?.Nombre ?? "N/A")</td>
+                <td>@(item.IdPresentacionNavigation?.Descripcion ?? "N/A")</td>
+                <td>@item.Precio.ToString("C")</td>
+                <td>@(item.IdProveedorNavigation?.RazonSocial ?? "N/A")</td>
+                <td>@item.UsuarioRegistro</td>
+                <td>@item.FechaRegistro.ToString("dd/MM/yyyy HH:mm")</td>
+                <td>
+                    @if (item.Estado == 1)
+                    {
+                        <span class="badge bg-success">Activo</span>
+                    }
+                    else
+                    {
+                        <span class="badge bg-secondary">Inactivo</span>
+                    }
+                </td>
+                <td>
+                    <div class="d-flex acciones-botones">
+                        <div class="d-flex justify-content-start">
+                            <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-sm btn-editar me-2">
+                                <i class="fa fa-pencil"></i> Editar
+                            </a>
+                            <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-sm btn-detalles me-2">
+                                <i class="fa fa-eye"></i> Detalles
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-sm btn-eliminar">
+                                <i class="fa fa-trash"></i> Eliminar
+                            </a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    .btn-rosa-claro {
+        background-color: #f497b6;
+        border-color: #f497b6;
+    }
+    .btn-rosa-claro:hover {
+        background-color: #e06a8a;
+        border-color: #e06a8a;
+        color: white;
+    }
+</style>
+

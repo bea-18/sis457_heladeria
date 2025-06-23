@@ -58,4 +58,3 @@ D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.csproj.Co
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHelade.B5025E5C.Up2Date
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.exe
 D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.pdb
-D:\SIS457\sis457_heladeria\Heladeria\CpHeladeria\obj\Debug\CpHeladeria.exe.config

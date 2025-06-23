@@ -313,10 +313,8 @@ INSERT INTO Cliente (nombre, nit, celular)
 VALUES ('Mateo', '987654321', '72345678');
 INSERT INTO Cliente (nombre, nit, celular)
 VALUES ('Ana', '123456789', '72345679');
-
 INSERT INTO Cliente (nombre, nit, celular)
 VALUES ('Carol', '789123456', '72345681');
-
 
 INSERT INTO TipoPago (descripcion)
 VALUES ('Efectivo'), ('Tarjeta de crédito'), ('QR');

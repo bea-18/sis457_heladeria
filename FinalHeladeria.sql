@@ -163,28 +163,28 @@ ALTER TABLE VentaDetalle ADD estado SMALLINT NOT NULL DEFAULT 1; -- -1:NoEnterga
 
 -- Procedimientos Almacenados
 GO
-ALTER PROC paSaborListar @parametro VARCHAR(100)
+CREATE PROC paSaborListar @parametro VARCHAR(100)
 AS
   SELECT * FROM Sabor
   WHERE estado<>-1 AND nombre LIKE '%'+REPLACE(@parametro,' ','%')+'%'
   ORDER BY estado DESC, nombre ASC;
 
 GO
-ALTER PROC paProveedorListar @parametro VARCHAR(100)
+CREATE PROC paProveedorListar @parametro VARCHAR(100)
 AS
   SELECT * FROM Proveedor
   WHERE estado<>-1 AND razonSocial + nit + telefono LIKE '%'+REPLACE(@parametro,' ','%')+'%'
   ORDER BY estado DESC, razonSocial ASC;
 
 GO
-ALTER PROC paPresentacionListar @parametro VARCHAR(100)
+CREATE PROC paPresentacionListar @parametro VARCHAR(100)
 AS
   SELECT * FROM Presentacion
   WHERE estado <> -1 AND descripcion LIKE '%'+REPLACE(@parametro, ' ', '%')+'%'
   ORDER BY estado DESC, descripcion ASC;
 
 GO
-ALTER PROC paProductoListar @parametro VARCHAR(100)
+create PROC paProductoListar @parametro VARCHAR(100)
 AS
   SELECT 
     p.id, 
@@ -203,7 +203,7 @@ AS
   ORDER BY p.estado DESC, p.nombre ASC;
 
 GO
-ALTER PROC paEmpleadoListar @parametro VARCHAR(100)
+create PROC paEmpleadoListar @parametro VARCHAR(100)
 AS
   SELECT 
     e.id, 
@@ -221,7 +221,7 @@ AS
   ORDER BY e.estado DESC, e.nombres ASC, e.primerApellido ASC;
 
 GO
-ALTER PROC paClienteListar @parametro VARCHAR(100)
+CREATE PROC paClienteListar @parametro VARCHAR(100)
 AS
   SELECT id,nombre,nit,celular
   FROM Cliente
@@ -231,7 +231,7 @@ AS
   ORDER BY nombre ASC;
 
 GO
-ALTER PROC paVentaListar @parametro VARCHAR(100)
+CREATE PROC paVentaListar @parametro VARCHAR(100)
 AS
   SELECT 
     v.id,
@@ -252,8 +252,9 @@ AS
         LIKE '%' + REPLACE(@parametro, ' ', '%') + '%'
   ORDER BY v.fechaRegistro DESC;
 
+
 GO
-ALTER PROC paVentaDetalleListar @idVenta INT
+CREATE PROC paVentaDetalleListar @idVenta INT
 AS
   SELECT 
     vd.id, 
@@ -274,7 +275,6 @@ AS
   WHERE vd.estado <> -1 
     AND vd.idVenta = @idVenta
   ORDER BY vd.fechaRegistro DESC;
-
  --DML
 INSERT INTO Sabor (nombre)
 VALUES ('Manzana'), ('Frutilla'), ('Naranja'), ('Banana'), ('Limón');
@@ -336,3 +336,5 @@ SELECT * FROM Venta;
 SELECT * FROM VentaDetalle;
 
 SELECT * FROM Producto WHERE Id = 3
+
+SELECT Id, Nombre, Precio FROM Producto

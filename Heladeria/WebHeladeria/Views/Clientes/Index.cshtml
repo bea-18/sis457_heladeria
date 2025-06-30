@@ -1,72 +1,4 @@
-﻿@* @model IEnumerable<WebHeladeria.Models.Cliente>
-
-@{
-    ViewData["Title"] = "Index";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-<h1>Index</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Nombre)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Nit)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Celular)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.UsuarioRegistro)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.FechaRegistro)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Estado)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-@foreach (var item in Model) {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nombre)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Nit)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Celular)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.UsuarioRegistro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.FechaRegistro)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Estado)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
-            </td>
-        </tr>
-}
-    </tbody>
-</table>
- *@
-
-@model IEnumerable<WebHeladeria.Models.Cliente>
+﻿@model IEnumerable<WebHeladeria.Models.Cliente>
 
 @{
     ViewData["Title"] = "Lista de Clientes";
@@ -87,9 +19,8 @@
             <th>Nombre</th>
             <th>NIT</th>
             <th>Celular</th>
-            <th>Usuario Registro</th>
-            <th>Fecha Registro</th>
-            <th>Estado</th>
+            <th>Usuario</th>
+            <th>Fecha de Registro</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -102,16 +33,6 @@
                 <td>@item.Celular</td>
                 <td>@item.UsuarioRegistro</td>
                 <td>@item.FechaRegistro.ToString("dd/MM/yyyy HH:mm")</td>
-                <td>
-                    @if (item.Estado == 1)
-                    {
-                        <span class="badge bg-success">Activo</span>
-                    }
-                    else
-                    {
-                        <span class="badge bg-secondary">Inactivo</span>
-                    }
-                </td>
                 <td>
                     <div class="d-flex acciones-botones">
                         <div class="d-flex justify-content-start">

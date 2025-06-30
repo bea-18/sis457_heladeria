@@ -24,14 +24,12 @@ public partial class Producto
 
     public short Estado { get; set; }
 
-    [Display(Name = "Presentación")]
-    public virtual Presentacion IdPresentacionNavigation { get; set; } = null!;
-
-    [Display(Name = "Proveedor")]
-    public virtual Proveedor IdProveedorNavigation { get; set; } = null!;
-
-    [Display(Name = "Sabor")]
-    public virtual Sabor IdSaborNavigation { get; set; } = null!;
-
     public virtual ICollection<VentaDetalle> VentaDetalles { get; set; } = new List<VentaDetalle>();
+
+    public virtual Presentacion? IdPresentacionNavigation { get; set; }
+
+    public virtual Proveedor? IdProveedorNavigation { get; set; }
+
+    public virtual Sabor? IdSaborNavigation { get; set; }
+
 }

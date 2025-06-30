@@ -61,7 +61,7 @@ namespace WebHeladeria.Controllers
                 var authProperties = new AuthenticationProperties
                 {
                     AllowRefresh = true,
-                    ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(1),
+                    ExpiresUtc = DateTimeOffset.UtcNow.AddMinutes(90),
                     IsPersistent = model.recordarme
                 };
 
@@ -86,8 +86,19 @@ namespace WebHeladeria.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
-            TempData["isLogged"] = false;
+            // Cierra la sesión de autenticación
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+
+            // Forzar eliminación manual de la cookie
+            Response.Cookies.Append(".AspNetCore.Cookies", "", new CookieOptions
+            {
+                Expires = DateTimeOffset.UtcNow.AddDays(-1),
+                Path = "/",
+                HttpOnly = true,
+                Secure = true, // Si usas HTTPS
+                SameSite = SameSiteMode.Lax
+            });
+
             return RedirectToAction(nameof(HomeController.Index), "Home");
         }
 

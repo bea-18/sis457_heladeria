@@ -21,13 +21,13 @@ public partial class FinalHeladeriaContext : DbContext
 
     public virtual DbSet<Empleado> Empleados { get; set; }
 
-    public virtual DbSet<Presentacion> Presentacions { get; set; }
+    public virtual DbSet<Presentacion> Presentacion { get; set; }
 
     public virtual DbSet<Producto> Productos { get; set; }
 
-    public virtual DbSet<Proveedor> Proveedors { get; set; }
+    public virtual DbSet<Proveedor> Proveedor { get; set; }
 
-    public virtual DbSet<Sabor> Sabors { get; set; }
+    public virtual DbSet<Sabor> Sabor { get; set; }
 
     public virtual DbSet<TipoPago> TipoPagos { get; set; }
 

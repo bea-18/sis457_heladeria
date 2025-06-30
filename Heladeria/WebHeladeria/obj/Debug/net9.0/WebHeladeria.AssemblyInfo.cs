@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebHeladeria")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+97bcc0df5db224aad3df89a73c64050e451bd489")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+77f008271f097777d2a394ad32a20af5a9eb19cc")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebHeladeria")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebHeladeria")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

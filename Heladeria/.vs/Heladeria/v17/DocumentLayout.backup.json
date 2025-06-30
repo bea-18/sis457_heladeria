@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "E:\\sis457_heladeria\\Heladeria\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|e:\\sis457_heladeria\\heladeria\\webheladeria\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|solutionrelative:webheladeria\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|e:\\sis457_heladeria\\heladeria\\webheladeria\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D37FEB6F-402E-4A4A-8421-4EBD85C1D736}|WebHeladeria\\WebHeladeria.csproj|solutionrelative:webheladeria\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "E:\\sis457_heladeria\\Heladeria\\WebHeladeria\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "WebHeladeria\\Controllers\\AccountController.cs",
-              "ToolTip": "E:\\sis457_heladeria\\Heladeria\\WebHeladeria\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "WebHeladeria\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAAAEMAAAAuAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-30T20:37:23.938Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "E:\\sis457_heladeria\\Heladeria\\WebHeladeria\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "WebHeladeria\\Views\\Home\\Index.cshtml",
+              "ToolTip": "E:\\sis457_heladeria\\Heladeria\\WebHeladeria\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "WebHeladeria\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAAAPEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-06-30T21:42:40.543Z",
               "EditorCaption": ""
             }
           ]

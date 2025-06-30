@@ -46,7 +46,7 @@ namespace WebHeladeria.Controllers
                 if (!string.IsNullOrWhiteSpace(cliente.Nit)
                     && !string.IsNullOrWhiteSpace(cliente.Nombre))
                 {
-                    cliente.UsuarioRegistro = User.Identity.Name;
+                    cliente.UsuarioRegistro = User?.Identity?.Name ?? "Sistema";
                     cliente.FechaRegistro = DateTime.Now;
                     cliente.Estado = 1;
                     _context.Add(cliente);
@@ -83,7 +83,7 @@ namespace WebHeladeria.Controllers
             {
                 try
                 {
-                    cliente.UsuarioRegistro = User.Identity.Name;
+                    cliente.UsuarioRegistro = User?.Identity?.Name ?? "Sistema";
                     _context.Update(cliente);
                     await _context.SaveChangesAsync();
                 }
@@ -121,6 +121,14 @@ namespace WebHeladeria.Controllers
             var cliente = await _context.Clientes.FindAsync(id);
             if (cliente != null)
             {
+                // Verifica si el cliente tiene ventas asociadas
+                bool tieneVentas = await _context.Venta.AnyAsync(v => v.IdCliente == id);
+                if (tieneVentas)
+                {
+                    TempData["Error"] = "No se puede eliminar el cliente porque tiene ventas asociadas.";
+                    return RedirectToAction(nameof(Index));
+                }
+
                 _context.Clientes.Remove(cliente);
                 await _context.SaveChangesAsync();
             }
@@ -131,7 +139,5 @@ namespace WebHeladeria.Controllers
         {
             return _context.Clientes.Any(e => e.Id == id);
         }
-
-   
     }
 }
